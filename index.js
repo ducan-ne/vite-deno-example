@@ -9,7 +9,7 @@ async function handleRequest(request: Request): Promise<Response> {
   // 3. We send the asset back to the client.
 
   // Check if the request is for style.css.
-  if (pathname.startsWith("/style.css")) {
+  if (pathname.startsWith("/")) {
     // Read the style.css file from the file system.
     const file = await Deno.readFile("./index.html");
     // Respond to the request with the style.css file.
